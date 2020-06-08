@@ -1,10 +1,13 @@
 
 var player1 ={
     hand: "empty"
-};
+}
 var player2 = {
     hand: "empty"
-};
+}
+var cpu ={
+    hand: "empty"
+}
 const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
@@ -32,6 +35,18 @@ function evaluation(p1, p2){
     }
     else if(p1.hand == p2.hand){
         result.innerHTML = "It's a draw!";
+    }
+}
+function cpuChooseHand(cpu, choice){
+    let roll = Math.floor(Math.random() * 101);
+    if(roll < 34){
+        cpu.hand = "rock"
+    }
+    if(roll > 33 && roll < 67){
+        cpu.hand = "paper"
+    }
+    if(roll > 66 && roll <= 100){
+        cpu.hand = "scissors"
     }
 }
 function chooseHand(player, choice){
