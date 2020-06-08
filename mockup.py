@@ -3,6 +3,7 @@
 
 print("Player 1 enter rock, paper, or scissors")
 player1_choice = input()
+print("---------------------------------------")
 print("Player 2 enter rock, paper, or scissors")
 player2_choice = input()
 
