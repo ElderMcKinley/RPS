@@ -1,29 +1,40 @@
-console.log("Player 1 enter rock, paper, or scissors");
-var player1_choice = window.prompt("Player 1 Choice: ");
-console.log("Player 2 enter rock, paper, or scissors");
-var player2_choice = window.prompt("Player 2 Choice: ");
+
+var player1 ={
+    hand: "empty"
+};
+var player2 = {
+    hand: "empty"
+};
+const rock = "rock";
+const paper = "paper";
+const scissors = "scissors";
 
 function evaluation(p1, p2){
-    if(p1 == "rock" && p2 == "scissors"){
-        console.log("Player 1 Wins!");
+    var result = document.getElementById("result");
+    // console.log("Evaluation started")
+    if(p1.hand == "rock" && p2.hand == "scissors"){
+        result.innerHTML = "Player 1 Wins!";
     }
-    else if(p2 == "rock" && p1 == "scissors"){
-        console.log("Player 2 Wins!");
+    else if(p2.hand == "rock" && p1.hand == "scissors"){
+        result.innerHTML = "Player 2 Wins!";
     }
-    else if(p1 == "rock" && p2 == "paper"){
-        console.log("Player 2 Wins!");
+    else if(p1.hand == "rock" && p2.hand == "paper"){
+        result.innerHTML = "Player 2 Wins!";
     }
-    else if(p2 == "rock" && p1 == "paper"){
-        console.log("Player 1 Wins!");
+    else if(p2.hand == "rock" && p1.hand == "paper"){
+        result.innerHTML = "Player 1 Wins!";
     }
-    else if(p1 == "scissors" && p2 == "paper"){
-        console.log("Player 1 Wins!");
+    else if(p1.hand == "scissors" && p2.hand == "paper"){
+        result.innerHTML = "Player 1 Wins!";
     }
-    else if(p2 == "scissors" && p1 =="paper"){
-        console.log("Player 2 Wins!");
+    else if(p2.hand == "scissors" && p1.hand =="paper"){
+        result.innerHTML = "Player 2 Wins!";
     }
-    else if(p1 == p2){
-        console.log("It's a draw!");
+    else if(p1.hand == p2.hand){
+        result.innerHTML = "It's a draw!";
     }
 }
-evaluation(player1_choice, player2_choice);
+function chooseHand(player, choice){
+    player.hand = choice;
+    console.log(player);
+}

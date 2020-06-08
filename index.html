@@ -5,6 +5,30 @@
         <script src="rps.js"></script>
     </head>
     <body>
-
+        <h1>Rock Paper Scissors Game</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td><b>Player 1</b></td>
+                    <td><b>Player 2</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="image"><img src ="images/rock.png" alt="player1 rock" onclick ="chooseHand(player1, rock)"></td>
+                    <td class="image"><img src ="images/rock.png" alt="player2 rock" onclick ="chooseHand(player2, rock)"></td>
+                </tr>
+                <tr>
+                    <td class="image"><img src = "images/paper.png" alt ="player1 paper" onclick ="chooseHand(player1, paper)"></td>
+                    <td class="image"><img src = "images/paper.png" alt ="player2 paper" onclick ="chooseHand(player2, paper)"></td>
+                </tr>
+                <tr>
+                    <td class="image"><img src ="images/scissors.png" alt = "player1 scissors" onclick ="chooseHand(player1, scissors)"></td>
+                    <td class="image"><img src ="images/scissors.png" alt = "player2 scissors" onclick ="chooseHand(player2, scissors)"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="result"></p>
+        <button onclick="evaluation(player1, player2)">Evaluate!</button>
     </body>
 </html>
